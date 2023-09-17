@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Судебное право РФ: Судебная практика и Анализ</title> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,37 +136,33 @@
     </section>
 
     <section id="chat">
-        <h2>Онлайн чат</h2>
-        <div class="chat-container">
-            <div class="chat-messages" id="chat-messages"></div>
-            <input type="text" class="chat-input" id="chat-input" placeholder="Введите сообщение">
-            <button class="chat-button" onclick="sendMessage()">Отправить</button>
-        </div>
-    </section>
+        <section id="chat">
+    <h2>Онлайн чат</h2>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages"></div>
+        <input type="text" class="chat-input" id="chat-input" placeholder="Введите сообщение">
+        <button class="chat-button" onclick="sendMessage()">Отправить</button>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2023 Ойдинов Чингиз</p>
-    </footer>
+<footer>
+    <p>&copy; 2023 Ойдинов Чингиз</p>
+</footer>
 
-    <script>
-        function toggleSection(sectionId) {
-            var sectionContent = document.getElementById(sectionId).querySelector('.section-content');
-            sectionContent.style.display = sectionContent.style.display === 'none' ? 'block' : 'none';
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById("chat-input");
+        var message = messageInput.value;
+        if (message.trim() !== "") {
+            var chatMessages = document.getElementById("chat-messages");
+            var newMessage = document.createElement("div");
+            newMessage.textContent = message;
+            chatMessages.appendChild(newMessage);
+            messageInput.value = "";
         }
-
-        function sendMessage() {
-            var messageInput = document.getElementById("chat-input");
-            var message = messageInput.value;
-            if (message.trim() !== "") {
-                var chatMessages = document.getElementById("chat-messages");
-                var newMessage = document.createElement("p");
-                newMessage.textContent = message;
-                chatMessages.appendChild(newMessage);
-                messageInput.value = "";
-            }
-        }
-    </script>
-
+    }
+</script>
+        
 </body>
-
+    
 </html>
