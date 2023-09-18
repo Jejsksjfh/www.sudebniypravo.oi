@@ -1,171 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Судебное право РФ: Судебная практика и Анализ</title> 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav a {
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .section-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .section-title h2 {
-            margin: 0;
-        }
-
-        .section-content {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .section-button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .section-button:hover {
-            background-color: #444;
-        }
-
-        .chat-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .chat-messages {
-            width: 100%;
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .chat-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-        }
-
-        .chat-button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .chat-button:hover {
-            background-color: #444;
-        }
-    </style>
+    <title>Обзор судебной системы Российской Федерации</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-
     <header>
-        <h1>Судебное право РФ: Решения и Анализ</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#courts">Суды</a></li>
+                <li><a href="#process">Процесс судопроизводства</a></li>
+                <li><a href="#problems">Проблемы и вызовы</a></li>
+                <li><a href="#reforms">Реформы и перспективы</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#practice">Судебная практика</a>
-        <a href="#analysis">Анализ и Комментарии</a>
-        <a href="#chat">Онлайн чат</a>
-    </nav>
-
-    <section id="practice">
-        <div class="section-title">
-            <h2>Судебная практика</h2>
-            <button class="section-button" onclick="toggleSection('practice')">Показать/Скрыть</button>
-        </div>
-        <div class="section-content">
-            <p>Судебная практика представляет собой совокупность решений судов, которые формируют прецеденты и являются основой для принятия решений в будущих судебных делах. В этом разделе мы предоставляем информацию о важных судебных решениях, которые могут быть полезными для юристов, студентов и всех, кто интересуется судебной практикой в Российской Федерации.</p>
-        </div>
+    <section id="about">
+        <h2>О проекте</h2>
+        <p>Текст о вашем проекте и его целях.</p>
     </section>
 
-    <section id="analysis">
-        <div class="section-title">
-            <h2>Анализ и Комментарии</h2>
-            <button class="section-button" onclick="toggleSection('analysis')">Показать/Скрыть</button>
-        </div>
-        <div class="section-content">
-            <p>В разделе "Анализ и Комментарии" мы предоставляем глубокий анализ и экспертные комментарии к важным судебным решениям. Мы разбираем прецеденты, анализируем их последствия и предоставляем практические рекомендации для юристов и других заинтересованных лиц. Здесь вы найдете информацию, которая поможет вам лучше понять судебную практику и применять ее в своей работе.</p>
-        </div>
+    <section id="courts">
+        <h2>Суды</h2>
+        <p>Текст об обзоре различных уровней судов, их компетенции и организации.</p>
     </section>
 
-    <section id="chat">
-        <section id="chat">
-    <h2>Онлайн чат</h2>
-    <div class="chat-container">
-        <div class="chat-messages" id="chat-messages"></div>
-        <input type="text" class="chat-input" id="chat-input" placeholder="Введите сообщение">
-        <button class="chat-button" onclick="sendMessage()">Отправить</button>
-    </div>
-</section>
-        <script async src="https://cse.google.com/cse.js?cx=107f8d7ebba074118">
-</script>
-<div class="gcse-search"></div>
+    <section id="process">
+        <h2>Процесс судопроизводства</h2>
+        <p>Текст о процессе судопроизводства в Российской Федерации. Здесь вы можете ознакомиться с основными этапами судебного процесса и правами сторон.</p>
+    </section>
 
-<footer>
-    <p>&copy; 2023 Ойдинов Чингиз</p>
-</footer>
+    <section id="problems">
+        <h2>Проблемы и вызовы</h2>
+        <p>Текст о проблемах и вызовах, с которыми сталкивается судебная система Российской Федерации. Здесь вы можете узнать о главных проблемах и их влиянии на судебную практику.</p>
+    </section>
 
-<script>
-    function sendMessage() {
-        var messageInput = document.getElementById("chat-input");
-        var message = messageInput.value;
-        if (message.trim() !== "") {
-            var chatMessages = document.getElementById("chat-messages");
-            var newMessage = document.createElement("div");
-            newMessage.textContent = message;
-            chatMessages.appendChild(newMessage);
-            messageInput.value = "";
+    <section id="reforms">
+        <h2>Реформы и перспективы</h2>
+        <p>Текст о предлагаемых реформах и перспективах развития судебной системы Российской Федерации. Здесь вы можете узнать о текущих и планируемых реформах и их целях.</p>
+    </section>
+
+    <footer>
+
+        <p>&copy Ойдинов Чингиз класс 10.4</p>
+<div class="logo"> <img 
+src="images/logo.jpg" alt="Логотип" width="250" height="100">
+</div>
+    </footer>
+
+    <script>
+        // Функция для открытия раздела в новом окне
+        function openSectionInNewWindow(event) {
+            event.preventDefault(); // Отменяем стандартное поведение ссылки
+            var sectionId = this.getAttribute('href').substring(1); // Получаем id раздела
+            var sectionText = document.getElementById(sectionId).innerHTML; // Получаем текст раздела
+            var newWindow = window.open('', '_blank'); // Открываем новое окно
+            newWindow.document.write('<html><head><title>' + sectionId + '</title></head><body>' + sectionText + '</body></html>'); // Вставляем текст раздела в новое окно
+            newWindow.document.close(); // Закрываем запись в новом окне
         }
-    }
-</script>
-        
+
+        // Назначаем обработчики событий для каждой ссылки
+        var aboutLink = document.querySelector('a[href="#about"]');
+        var courtsLink = document.querySelector('a[href="#courts"]');
+        var processLink = document.querySelector('a[href="#process"]');
+        var problemsLink = document.querySelector('a[href="#problems"]');
+        var reformsLink = document.querySelector('a[href="#reforms"]');
+
+        aboutLink.addEventListener('click', openSectionInNewWindow);
+        courtsLink.addEventListener('click', openSectionInNewWindow);
+        processLink.addEventListener('click', openSectionInNewWindow);
+        problemsLink.addEventListener('click', openSectionInNewWindow);
+        reformsLink.addEventListener('click', openSectionInNewWindow);
+
+        // Пример динамического поведения
+        document.getElementById("about").addEventListener("click", function() {
+            alert("Вы нажали на раздел 'О проекте'!");
+        });
+
+        // Пример плавной прокрутки при нажатии на ссылки в навигационном меню
+        document.querySelectorAll("nav ul li a").forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                var target = document.querySelector(this.getAttribute("href"));
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-    
 </html>
