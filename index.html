@@ -14,7 +14,7 @@
                 <li><a href="#courts">Суды</a></li>
                 <li><a href="#process">Процесс судопроизводства</a></li>
                 <li><a href="#problems">Проблемы и вызовы</a></li>
-                <li><a href="#reforms">Реформы и перспективы</a></li>
+                <li><a href="#reforms">Реформы</a></li>
             </ul>
         </nav>
     </header>
@@ -40,25 +40,22 @@
     </section>
 
     <section id="reforms">
-        <h2>Реформы и перспективы</h2>
+        <h2>Реформы</h2>
         <p>Текст о предлагаемых реформах и перспективах развития судебной системы Российской Федерации. Здесь вы можете узнать о текущих и планируемых реформах и их целях.</p>
     </section>
 
     <footer>
-
         <p>&copy Ойдинов Чингиз класс 10.4</p>
-<div class="logo"> <img 
-src="images/logo.jpg" alt="Логотип" width="250" height="100">
-</div>
+        <div class="logo"> <img src="images/logo.jpg" alt="Логотип" width="250" height="100"></div>
     </footer>
 
     <script>
-        // Функция для открытия раздела в новом окне
+        // Функция для открытия раздела в новом окне с настроенными параметрами
         function openSectionInNewWindow(event) {
             event.preventDefault(); // Отменяем стандартное поведение ссылки
             var sectionId = this.getAttribute('href').substring(1); // Получаем id раздела
             var sectionText = document.getElementById(sectionId).innerHTML; // Получаем текст раздела
-            var newWindow = window.open('', '_blank'); // Открываем новое окно
+            var newWindow = window.open('', '_blank', 'width=800,height=600,top=100,left=100,scrollbars=yes,location=no,resizable=yes'); // Открываем новое окно с параметрами
             newWindow.document.write('<html><head><title>' + sectionId + '</title></head><body>' + sectionText + '</body></html>'); // Вставляем текст раздела в новое окно
             newWindow.document.close(); // Закрываем запись в новом окне
         }
@@ -94,4 +91,4 @@ src="images/logo.jpg" alt="Логотип" width="250" height="100">
         });
     </script>
 </body>
-</html>
+    </html>
