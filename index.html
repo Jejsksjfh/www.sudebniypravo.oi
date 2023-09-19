@@ -10,11 +10,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#about">О проекте</a></li>
-                <li><a href="#courts">Суды</a></li>
-                <li><a href="#process">Процесс судопроизводства</a></li>
-                <li><a href="#problems">Проблемы и вызовы</a></li>
-                <li><a href="#reforms">Реформы</a></li>
+                <li><a href="https://example.com/about">О проекте</a></li>
+                <li><a href="https://example.com/courts">Суды</a></li>
+                <li><a href="https://example.com/process">Процесс судопроизводства</a></li>
+                <li><a href="https://example.com/problems">Проблемы и вызовы</a></li>
+                <li><a href="https://example.com/reforms">Реформы</a></li>
             </ul>
         </nav>
     </header>
@@ -50,16 +50,7 @@
     </footer>
 
     <script>
-        // Функция для открытия раздела в новом окне с настроенными параметрами
-        function openSectionInNewWindow(event) {
-            event.preventDefault(); // Отменяем стандартное поведение ссылки
-            var sectionId = this.getAttribute('href').substring(1); // Получаем id раздела
-            var sectionText = document.getElementById(sectionId).innerHTML; // Получаем текст раздела
-            var newWindow = window.open('', '_blank', 'width=800,height=600,top=100,left=100,scrollbars=yes,location=no,resizable=yes'); // Открываем новое окно с параметрами
-            newWindow.document.write('<html><head><title>' + sectionId + '</title></head><body>' + sectionText + '</body></html>'); // Вставляем текст раздела в новое окно
-            newWindow.document.close(); // Закрываем запись в новом окне
-        }
-
+        
         // Назначаем обработчики событий для каждой ссылки
         var aboutLink = document.querySelector('a[href="#about"]');
         var courtsLink = document.querySelector('a[href="#courts"]');
