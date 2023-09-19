@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    animation: fadeIn 1s ease, siteOpen 2s ease; /* Анимация появления при загрузке страницы и анимация открытия сайта */
 }
 
 /* Стили для заголовков секций и абзацев текста */
@@ -109,6 +110,16 @@ button {
 
 button:hover {
     background-color: #cc0000;
+}
+
+/* Дополнительные анимации */
+@keyframes siteOpen {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Общие стили для мобильных устройств */
