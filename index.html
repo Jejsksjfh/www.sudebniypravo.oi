@@ -78,27 +78,17 @@
             alert("Вы нажали на раздел 'О проекте'!");
         });
 
-        // Пример анимации при прокрутке
-window.addEventListener('scroll', function() {
-    var sections = document.querySelectorAll('section');
-    sections.forEach(function(section) {
-        if (isInViewport(section)) {
-            section.classList.add('animate'); // Добавляем класс для анимации
+        // Пример плавной прокрутки при нажатии на ссылки в навигационном меню
+        document.querySelectorAll("nav ul li a").forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                var target = document.querySelector(this.getAttribute("href"));
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
-
-// Проверка, виден ли элемент в видимой области
-function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-      }
-   });
-});
     </script>
 </body>
-    </html>
+</html>
