@@ -15,71 +15,56 @@
                 <li><a href="https://jejsksjfh.github.io/o.sudproizv.oi/">Процесс судопроизводства</a></li>
                 <li><a href="https://jejsksjfh.github.io/o.privov.oi/">Проблемы и вызовы</a></li>
                 <li><a href="https://jejsksjfh.github.io/o.reformaxsud.oi/">Реформы</a></li>
+                <li><a href="#feedback">Обратная связь</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>О проекте</h2>
-        <p>Текст о вашем проекте и его целях.</p>
+    <section id="content">
+        <h1>Обзор судебной системы Российской Федерации</h1>
+
+        <p>Добро пожаловать на наш веб-сайт, посвященный судебной системе Российской Федерации. Мы предоставляем обширную информацию о судебных органах, процессе судопроизводства, проблемах и вызовах, а также реформах в судебной системе.</p>
+
+        <p>Наша цель - предоставить вам полезную информацию о судебной системе России и помочь вам лучше понять ее структуру и функционирование. Используйте навигационное меню выше, чтобы перейти к интересующей вас теме.</p>
     </section>
 
-    <section id="courts">
-        <h2>Суды</h2>
-        <p>Текст об обзоре различных уровней судов, их компетенции и организации.</p>
-    </section>
+    <!-- Раздел обратной связи с использованием Formspree -->
+    <section id="feedback">
+        <h2>Обратная связь</h2>
+        <p>Если у вас есть вопросы или комментарии, пожалуйста, заполните форму обратной связи ниже:</p>
 
-    <section id="process">
-        <h2>Процесс судопроизводства</h2>
-        <p>Текст о процессе судопроизводства в Российской Федерации. Здесь вы можете ознакомиться с основными этапами судебного процесса и правами сторон.</p>
-    </section>
-
-    <section id="problems">
-        <h2>Проблемы и вызовы</h2>
-        <p>Текст о проблемах и вызовах, с которыми сталкивается судебная система Российской Федерации. Здесь вы можете узнать о главных проблемах и их влиянии на судебную практику.</p>
-    </section>
-
-    <section id="reforms">
-        <h2>Реформы</h2>
-        <p>Текст о предлагаемых реформах и перспективах развития судебной системы Российской Федерации. Здесь вы можете узнать о текущих и планируемых реформах и их целях.</p>
+        <form action="https://formspree.io/f/xbjvzkzy" method="POST">
+            <label for="имя">Имя:</label>
+            <input type="text" id="имя" name="имя" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="сообщение">Сообщение:</label>
+            <textarea id="сообщение" name="сообщение" rows="4" required></textarea>
+            
+            <button type="submit">Отправить</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy Ойдинов Чингиз класс 10.4</p>
+        <p>&copy; Ойдинов Чингиз, класс 10.4</p>
         <div class="logo"> <img src="images/logo.jpg" alt="Логотип" width="250" height="100"></div>
     </footer>
 
     <script>
+        // Функция для очистки полей в форме обратной связи
+        function clearFeedbackForm() {
+            document.getElementById("feedbackForm").reset();
+        }
         
-        // Назначаем обработчики событий для каждой ссылки
-        var aboutLink = document.querySelector('a[href="#about"]');
-        var courtsLink = document.querySelector('a[href="#courts"]');
-        var processLink = document.querySelector('a[href="#process"]');
-        var problemsLink = document.querySelector('a[href="#problems"]');
-        var reformsLink = document.querySelector('a[href="#reforms"]');
+        // Вызываем функцию очистки при загрузке страницы
+        window.addEventListener('load', clearFeedbackForm);
 
-        aboutLink.addEventListener('click', openSectionInNewWindow);
-        courtsLink.addEventListener('click', openSectionInNewWindow);
-        processLink.addEventListener('click', openSectionInNewWindow);
-        problemsLink.addEventListener('click', openSectionInNewWindow);
-        reformsLink.addEventListener('click', openSectionInNewWindow);
-
-        // Пример динамического поведения
-        document.getElementById("about").addEventListener("click", function() {
-            alert("Вы нажали на раздел 'О проекте'!");
-        });
-
-        // Пример плавной прокрутки при нажатии на ссылки в навигационном меню
-        document.querySelectorAll("nav ul li a").forEach(function(link) {
-            link.addEventListener("click", function(event) {
-                event.preventDefault();
-                var target = document.querySelector(this.getAttribute("href"));
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
+// Функция для очистки полей в форме обратной связи
+function clearFeedbackForm() {
+    document.getElementById("feedbackForm").reset();
+}
     </script>
 </body>
 </html>
